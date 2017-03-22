@@ -16,7 +16,10 @@ namespace TabbedPageGrouping.ViewModels {
         private ObservableCollection<Animal> animals;
         public ObservableCollection<Animal> Animals {
             get { return animals; }
-            set { animals = value; }
+            set { 
+                animals = value; 
+                OnPropertyChanged("Animals");
+            }
         }
 
         public AnimalSecondViewModel(string continent) {
