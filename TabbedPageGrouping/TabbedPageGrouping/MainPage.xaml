@@ -2,18 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TabbedPageGrouping"
-             x:Class="TabbedPageGrouping.MainPage">
+             x:Class="TabbedPageGrouping.MainPage"
+             Title="Tabbed Page">
 
     <StackLayout Margin="12"
                  HorizontalOptions="CenterAndExpand"
                  VerticalOptions="CenterAndExpand">
 
+        <Label HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               FontAttributes="Bold"
+               FontSize="Large"
+               Margin="0,0,0,8"
+               HorizontalTextAlignment="Center"
+               Text="Xamarin.Forms: Grouping data with Tabbed page tutorial"/>
+
         <Button Text="All Animals"
-                HorizontalOptions="CenterAndExpand"
+                Margin="20,8,20,8"
+                HorizontalOptions="FillAndExpand"
                 Clicked="GoToAll"/>
         <Button Text="Grouped Animals"
                 Clicked="GoToTabs"
-                HorizontalOptions="CenterAndExpand"/>
+                Margin="20,8,20,8"
+                HorizontalOptions="FillAndExpand"/>
     </StackLayout>
 
 </ContentPage>
