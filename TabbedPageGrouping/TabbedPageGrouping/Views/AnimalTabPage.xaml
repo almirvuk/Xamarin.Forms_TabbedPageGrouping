@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabbedPageGrouping.Views.AnimalTabPage">
+
+    <ListView ItemsSource="{Binding Animals}"
+              HasUnevenRows="True"
+              BackgroundColor="#ecf0f1"
+              SeparatorVisibility="None"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand">
+
+        <ListView.ItemTemplate>
+
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Margin="6,4,6,4"
+                                 BackgroundColor="White">
+                        <Label Text="{Binding Name}"
+                               Margin="8"
+                               FontAttributes="Bold"
+                               FontSize="Medium" />
+                        <Label Text="{Binding ContinentOrigin}"
+                               Margin="8,2,8,4"
+                               FontSize="Small" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
