@@ -11,14 +11,13 @@ using TabbedPageGrouping.Models;
 
 namespace TabbedPageGrouping.ViewModels {
 
-    public class AnimalViewModel : INotifyPropertyChanged {
+    public class AnimalViewModel{
 
         private ObservableCollection<Animal> animals;
         public ObservableCollection<Animal> Animals {
             get { return animals; }
             set { 
                 animals = value; 
-                OnPropertyChanged("Animals");
             }
         }
 
@@ -32,9 +31,5 @@ namespace TabbedPageGrouping.ViewModels {
                 Animals.Add(animal);
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged([CallerMemberName]string propertyName = "") =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
